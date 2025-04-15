@@ -1,20 +1,16 @@
-.align-center{
-    align-content: center;
+body {
+  color: white;
+  background: linear-gradient(135deg, #070614, #0e0d1f, #1c122b);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.img-responsive{
-    width: 100%;
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-body{
-    color:white;
-    background: linear-gradient(135deg, #070614, #0e0d1f, #1c122b);
-    background-size: 400% 400%;
-    animation: bgAnimation 10s ease infinite;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.container-fluidnavbar navbar-dark bg-dark navbar-expand-lg a {
-  color: #ffffff;
-}
-
+.img-responsive { width: 100%; }
 .barraPrincipal {
   display: flex;
   justify-content: left;
@@ -27,84 +23,93 @@ body{
   flex-wrap: wrap;
   backdrop-filter: blur(4px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  box-sizing: border-box;
-}
-.barraPrincipal a.secundario {
-  font-size: 0.9rem;
-  color: rgba(224, 224, 224, 0.50);
-  transition: color 0.3 ease, transform 0.3 ease;
-}
-.barraPrincipal a.secundario:hover {
-  color: white;
-  transform: scale(1.02);
 }
 .barraPrincipal span.activo {
   font-weight: bold;
-  color: white;
-  text-decoration: solid;
   font-size: 1.4rem;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.03);
 }
 .barraPrincipal a {
   color: #818181;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3 ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .barraPrincipal a:hover {
   color: #fff;
   transform: scale(1.02);
 }
-
-@keyframes bgAnimation {
-    0% { background-position: 0% 50%;
-    }
-    50% {background-position: 100% 50%;
-    }
-    100% {background-position: 0% 50%;
-    }
+.project-card-wrapper {
+  max-width: 500px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
 }
+
+.project-preview {
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  width: 600px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: 10;
+  border-radius: 1px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  pointer-events: none; /* <- Esto evita que bloquee el clic */
+}
+
+.view-button {
+  z-index: 20; /* Asegurate que esté arriba también */
+  position: relative;
+}
+
+.project-card-wrapper:hover .project-preview {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.3);
+}
+
+.project-card-wrapper:hover .btn-outline-light {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px #ffffff40;
+  transition: all 0.3s ease-in-out;
+}
+
 a:hover .fa-github {
-    color: #6e40c9;
-    transform: scale(1.2);
-    transition: 0.3s ease;
-  }
-  
-  a:hover .fa-envelope {
-    color: #ff5e99;
-    transform: rotate(10deg) scale(1.1);
-    transition: 0.3s ease;
-  }
-  
-  a:hover .fa-whatsapp {
-    color: #25D366;
-    transform: scale(1.2);
-    transition: 0.3s ease;
-  }
+  color: #6e40c9;
+  transform: scale(1.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
-  .redes-sociales a {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 5%;
-    margin: 0 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  }
+a .fa-github {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
-  #projects h2 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 2.2rem;
-  }
-  
-  .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration-style: solid;
-  }
-  
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-  }
-  
+.redes-sociales {
+  text-align: center;
+  margin-top: 40px;
+}
+.redes-sociales a {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 5%;
+  margin: 0 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.redes-sociales a:hover .fa-github {
+  color: #6e40c9;
+  transform: scale(1.2);
+}
+.redes-sociales a:hover .fa-envelope {
+  color: #ff5e99;
+  transform: rotate(10deg) scale(1.1);
+}
+.redes-sociales a:hover .fa-whatsapp {
+  color: #25D366;
+  transform: scale(1.2);
+}

@@ -1,84 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
   <div class="barraPrincipal">
-    <span class="activo">About me
+     <span class="activo">
+      <a href="index.html">
+      About me 
       <i class="fas fa-address-card"></i>
+      </a>
     </span>
     <a href="contact.html" class="secundario">
-      Wanna talk with me?
-      <i class="fas fa-paper-plane"></i>
+      Wanna talk with me? <i class="fas fa-paper-plane"></i>
     </a>
-    
   </div>
 
-  <div class="row">
-    <div class="col-md-3 align-center">
-      <img src="cat.png" alt="" 
-      srcset="" class="img img-responsive">
-    </div>
-    <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>I am Javier Villarroel Muller</h2>
-          <p>I am an university student of software engineer. I like Javascript and C# the most, I'm planning on learn C++ and C</p>
-        </div>
+  <div class="container mt-4">
+    <div class="row align-items-center">
+      <div class="col-md-3 text-center">
+        <img src="cat.png" alt="cat profile pic" class="img img-responsive rounded-circle" />
+      </div>
+      <div class="col-md-9">
+        <h2>I am Javier Villarroel Muller</h2>
+        <p>
+          I am a university student of Software Engineering. I like JavaScript and C# the most.
+          I'm planning to learn C++ and C.
+        </p>
       </div>
     </div>
   </div>
 
-  <section id="projects" style="margin-top: 60px;">
-    <h2 class="text-center mb-4">My Projects
-      <i class="fa-solid fa-code"></i>
+  <section id="projects" class="container mt-5">
+    <h2 class="text-center mb-4">
+      My Projects <i class="fa-solid fa-code"></i>
     </h2>
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="card text-white bg-dark mb-3 shadow-lg" style="border-radius: 15px;">
-          <div class="card-body">
-            <h5 class="card-title">Portfolio Website</h5>
+
+    <div class="row g-4 justify-content-center">
+      <!-- pproyecto deepseek -->
+      <div class="project-card-wrapper">
+        <div class="card text-white bg-dark shadow-lg project-card" style="border-radius: 15px;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Deepseek Chat</h5>
             <p class="card-text">
-              A modern personal portfolio website built with HTML, CSS, and a sprinkle of Bootstrap. Includes animated background and responsive design.
+              A simple app built in C# and OpenRouter API. Chat with Deepseek completely free and unlimited.
             </p>
-            <a href="https://github.com/Javiserdo/aboutme" class="btn btn-outline-light" target="_blank">
+            <a href="https://github.com/Javiserdo/deepseek-ai" class="btn btn-outline-light" target="_blank">
               <i class="fab fa-github"></i> View on GitHub
             </a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="card text-white bg-dark mb-3 shadow-lg" style="border-radius: 15px;">
-          <div class="card-body">
-            <h5 class="card-title">Discord bot</h5>
-            <p class="card-text">
-              A Discord bot built in NodeJS V20 and DiscordJS API V14, with a lot of util commands, utilities, MongoDB database, even IA tools.
-            </p>
-            <a href="https://github.com/Javiserdo/whoTao" class="btn btn-outline-light" target="_blank">
-              <i class="fab fa-github"></i> View on GitHub
-            </a>
-          </div>
+      
+        <!-- bvista previa de la imag3n -->
+        <div class="project-preview" style="background-image: url('deepseek.png');">
+          <div class="project-overlay"></div>
         </div>
       </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="card text-white bg-dark mb-3 shadow-lg" style="border-radius: 15px;">
-          <div class="card-body">
-            <h5 class="card-title">Deepseek chat</h5>
+      
+      
+      <!-- proyecto discord -->
+      <div class="col-md-6">
+        <div class="card text-white bg-dark shadow-lg project-card" style="border-radius: 15px; overflow: hidden;">
+          <div class="project-preview" style="background-image: url('https://i.imgur.com/TU_IMAGEN.jpg');">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Discord Bot</h5>
             <p class="card-text">
-              A simple app built in C# and openrouter api. Chat with Deepseek completely free and unlimited, personalize the IA responses with a custom personality.
+              A Discord bot built in Node.js v20 and Discord.js API v14, with tons of utility commands, MongoDB database and AI tools.
             </p>
             <a href="https://github.com/Javiserdo/deepseek-ai" class="btn btn-outline-light" target="_blank">
               <i class="fab fa-github"></i> View on GitHub
@@ -89,7 +83,8 @@
     </div>
   </section>
 
-  <div class="redes-sociales" style="text-align: center; margin-top: 40px;">
+  <!-- redes sociales -->
+  <div class="redes-sociales text-center mt-5">
     <a href="https://github.com/Javiserdo" target="_blank">
       <i class="fab fa-github"></i>
     </a>
@@ -101,7 +96,6 @@
     </a>
   </div>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
