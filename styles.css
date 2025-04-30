@@ -47,11 +47,11 @@ body {
 
 .project-preview {
   position: absolute;
-  top: -250px;
-  left: 50%;
+  top: -280px;
+  left: 55%;
   transform: translateX(-50%) scale(0.9);
-  width: 600px;
-  height: 280px;
+  width: 650px;
+  height: 180%;
   background-size: cover;
   background-position: center;
   opacity: 0;
